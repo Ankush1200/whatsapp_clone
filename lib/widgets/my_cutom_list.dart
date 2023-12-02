@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyCustomList extends StatelessWidget{
   final String title;
   final String subtitle;
-  final IconData leadingIcon;
+  final CircleAvatar leadingIcon;
   final VoidCallback onTap;
 
   const MyCustomList({
@@ -17,7 +17,7 @@ class MyCustomList extends StatelessWidget{
     return ListTile(
       title: Text(title),
       subtitle: Text(subtitle),
-      leading: Icon(leadingIcon),
+      leading: CircleAvatar(child: leadingIcon),
       onTap: onTap,
     );
   }

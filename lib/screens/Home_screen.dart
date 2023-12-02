@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:whatsapp_clone/colors/theaming.dart';
 import 'package:whatsapp_clone/screens/You.dart';
+import 'package:whatsapp_clone/widgets/my_cutom_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +24,8 @@ late TabController _controller;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("WhatsApp",style: TextStyle(fontSize:23)),
+        backgroundColor: AppColors.iconcolor,
+        title: const Text("WhatsApp",style: TextStyle(fontSize:23,)),
         actions: [
           IconButton(onPressed: () {},icon: const Icon(Icons.camera_alt_outlined)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search_rounded)),
@@ -44,6 +47,8 @@ late TabController _controller;
           ),
         ],
         bottom: TabBar(
+          indicatorColor: Colors.white,
+          indicatorWeight:2,
           controller: _controller,
           tabs: [
             Tab(icon: Icon(Icons.groups),),
@@ -56,8 +61,19 @@ late TabController _controller;
       body: TabBarView(
         controller:_controller ,
         children: [
-        Center(child: Text("Community")),
-        Center(child: Text("Chats")),
+        ListView(
+          children: [],
+        ),
+        // Center(child: Text("Community")),
+        ListView(
+          children: [
+            MyCustomList(title: 'Ankush Prajapati', subtitle: 'Hi How are you', leadingIcon: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")), onTap:(){}),
+            MyCustomList(title: 'Abhishek Kumar', subtitle: 'Happy Birthday', leadingIcon: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")), onTap:(){}),
+            MyCustomList(title: 'Mrityunjay Singh', subtitle: 'dagd', leadingIcon: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),  onTap:(){}),
+            MyCustomList(title: 'Vedant Singh', subtitle: 'dagd', leadingIcon: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),  onTap:(){}),
+            MyCustomList(title: 'Dharmendra Baghel', subtitle: 'dagd', leadingIcon: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),  onTap:(){}),
+          ],
+        ),
         Center(child: Text("Updates")),
         Center(child: Text("Calls")),
       ]),

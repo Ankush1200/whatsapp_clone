@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/widgets/my_list_item.dart';
+import 'package:whatsapp_clone/widgets/my_cutom_list.dart';
 
 import '../colors/theaming.dart';
 
@@ -15,6 +15,8 @@ class _YouState extends State<You> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
+        backgroundColor: AppColors.iconcolor,
         title: const Text("You"),
         actions: [
           Padding(
@@ -42,56 +44,56 @@ class _YouState extends State<You> {
               TextButton(
                 child: const Text(
                   "Ankush Prajapati⌄",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: AppColors.textcolor),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
-                      context: context,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      builder: (BuildContext context) {
-                        // ignore: sized_box_for_whitespace
-                        return Container(
-                          height: 200,
-                          child: ListView(
-                            children: [
-                              const Icon(Icons.linear_scale),
-                              const ListTile(
-                                leading: CircleAvatar(
-                                    backgroundImage: AssetImage(
-                                        "assets/images/profile.png")),
-                                title: Text(
-                                  "Ankush Prajapati",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                subtitle: Text("+91 7860775609"),
-                                trailing: Icon(
-                                  Icons.check_circle,
+                    context: context,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    builder: (BuildContext context) {
+                      // ignore: sized_box_for_whitespace
+                      return Container(
+                        height: 200,
+                        child: ListView(
+                          children: [
+                            const Icon(Icons.linear_scale),
+                            const ListTile(
+                              leading: CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage("assets/images/profile.png")),
+                              title: Text(
+                                "Ankush Prajapati",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              subtitle: Text("+91 7860775609"),
+                              trailing: Icon(
+                                Icons.check_circle,
+                                color: AppColors.iconcolor,
+                              ),
+                            ),
+                            ListTile(
+                              // leading: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),
+                              title: const Text("Add another account",
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.w500)),
+                              // subtitle: Text("+91 7860775609"),
+                              leading: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.add_circle_outline,
                                   color: AppColors.iconcolor,
                                 ),
                               ),
-                              ListTile(
-                                // leading: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),
-                                title: const Text("Add another account",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w500)),
-                                // subtitle: Text("+91 7860775609"),
-                                leading: IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.add_circle_outline,
-                                    color: AppColors.iconcolor,
-                                  ),
-                                ),
-                                // : Icon(Icons.add_circle_outline, color: AppColors.iconcolor,),
-                              )
-                            ],
-                          ),
-                        );
-                      });
+                              // : Icon(Icons.add_circle_outline, color: AppColors.iconcolor,),
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                  );
                 },
               ),
-              // Text("Ankush Prajapati",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
               const Text(
                 "+91 7860775609",
                 style: TextStyle(
@@ -105,8 +107,7 @@ class _YouState extends State<You> {
                 child: Text(
                   "The happiness of your life is depend upon the quality of your thoughts....💖",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 17, color:AppColors.subtitle),
+                  style: TextStyle(fontSize: 17, color: AppColors.subtitle),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
                 ),
@@ -211,7 +212,6 @@ class _YouState extends State<You> {
                   ),
                 ],
               ),
-              Text("sfsl"),
             ],
           ),
         ],

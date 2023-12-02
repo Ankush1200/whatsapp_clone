@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:whatsapp_clone/colors/theaming.dart';
 import 'package:whatsapp_clone/screens/Home_screen.dart';
-
 import 'screens/You.dart';
 void main() {
   runApp(const MyApp());
@@ -15,13 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         theme: ThemeData(
+          // useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF075E54),
+            seedColor: AppColors.iconcolor,
           ),
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        home:const You(),
+        home:const HomeScreen(),
     );
   }
 }
