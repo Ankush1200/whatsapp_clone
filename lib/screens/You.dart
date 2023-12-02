@@ -13,201 +13,218 @@ class _YouState extends State<You> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("You"),
-          actions: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: IconButton(
-                  onPressed: () {}, icon: const Icon(Icons.search_rounded)),
-            )
-          ],
-        ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 30),
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/profile.png"),
-                    radius: 50,
-                  ),
+      appBar: AppBar(
+        title: const Text("You"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: IconButton(
+                onPressed: () {}, icon: const Icon(Icons.search_rounded)),
+          )
+        ],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 30),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage("assets/images/profile.png"),
+                  radius: 50,
                 ),
-                const SizedBox(
-                  height: 10,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextButton(
+                child: const Text(
+                  "Ankush Prajapati⌄",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                TextButton(
-                  child: const Text(
-                    "Ankush Prajapati⌄",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                  onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                        builder: (BuildContext context) {
-                          // ignore: sized_box_for_whitespace
-                          return Container(
-                            height: 200,
-                            child: ListView(
-                              children: [
-                                const Icon(Icons.linear_scale),
-                                const ListTile(
-                                  leading: CircleAvatar(
-                                      backgroundImage: AssetImage(
-                                          "assets/images/profile.png")),
-                                  title: Text("Ankush Prajapati",style: TextStyle(fontWeight: FontWeight.bold),),
-                                  subtitle: Text("+91 7860775609"),
-                                  trailing: Icon(
-                                    Icons.check_circle,
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      builder: (BuildContext context) {
+                        // ignore: sized_box_for_whitespace
+                        return Container(
+                          height: 200,
+                          child: ListView(
+                            children: [
+                              const Icon(Icons.linear_scale),
+                              const ListTile(
+                                leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                        "assets/images/profile.png")),
+                                title: Text(
+                                  "Ankush Prajapati",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                subtitle: Text("+91 7860775609"),
+                                trailing: Icon(
+                                  Icons.check_circle,
+                                  color: Color(0xFF075E54),
+                                ),
+                              ),
+                              ListTile(
+                                // leading: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),
+                                title: const Text("Add another account",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w500)),
+                                // subtitle: Text("+91 7860775609"),
+                                leading: IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.add_circle_outline,
                                     color: Color(0xFF075E54),
                                   ),
                                 ),
-                                ListTile(
-                                  // leading: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),
-                                  title: const Text("Add another account",style: TextStyle(fontWeight: FontWeight.w500)),
-                                  // subtitle: Text("+91 7860775609"),
-                                  leading: IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.add_circle_outline,
-                                      color: Color(0xFF075E54),
-                                    ),
-                                  ),
-                                  // : Icon(Icons.add_circle_outline, color: Color(0xFF075E54),),
-                                )
-                              ],
-                            ),
-                          );
-                        });
-                  },
-                ),
-                // Text("Ankush Prajapati",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
-                const Text(
-                  "+91 7860775609",
+                                // : Icon(Icons.add_circle_outline, color: Color(0xFF075E54),),
+                              )
+                            ],
+                          ),
+                        );
+                      });
+                },
+              ),
+              // Text("Ankush Prajapati",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+              const Text(
+                "+91 7860775609",
+                style: TextStyle(
+                    fontSize: 17, color: Color.fromARGB(255, 121, 118, 118)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const SizedBox(
+                width: 300,
+                child: Text(
+                  "The happiness of your life is depend upon the quality of your thoughts....💖",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 17, color: Color.fromARGB(255, 121, 118, 118)),
+                      fontSize: 17, color: Color.fromARGB(255, 124, 123, 123)),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 3,
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const SizedBox(
-                  width: 300,
-                  child: Text(
-                    "The happiness of your life is depend upon the quality of your thoughts....💖",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 17,
-                        color: Color.fromARGB(255, 124, 123, 123)),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 3,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  InkWell(
+                    borderRadius: BorderRadius.circular(20),
+                    onTap: () {},
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      elevation: 2,
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 25.0, vertical: 10),
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.person_pin,
+                              color: Color(0xFF075E54),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Profile",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  children: [
-                    InkWell(
-                      borderRadius: BorderRadius.circular(20),
-                      onTap: (){},
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        elevation: 2,
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal:25.0, vertical: 10),
-                          child: Column(
-                            children: [
-                              Icon(
-                                Icons.person_pin,
-                                color: Color(0xFF075E54),
-                                size:30,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Profile",
-                                style: TextStyle(fontSize: 15),
-                              )
-                            ],
-                          ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      elevation: 2,
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 23.0, vertical: 10),
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.lock,
+                              color: Color(0xFF075E54),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Privacy",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width:5,
-                    ),
-                    InkWell(
-                      onTap: (){},
-                      borderRadius: BorderRadius.circular(20),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        elevation: 2,
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 23.0, vertical: 10),
-                          child: Column(
-                            children: [
-                              Icon(
-                                Icons.lock,
-                                color: Color(0xFF075E54),
-                                size: 30,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Privacy",
-                                style: TextStyle(fontSize: 15),
-                              )
-                            ],
-                          ),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      elevation: 2,
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 20.0, vertical: 10),
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.contacts,
+                              color: Color(0xFF075E54),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Contacts",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width:5,
-                    ),
-                    InkWell(
-                      onTap: (){},
-                      borderRadius:BorderRadius.circular(20),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        elevation: 2,
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 10),
-                          child: Column(
-                            children: [
-                              Icon(
-                                Icons.contacts,
-                                color: Color(0xFF075E54),
-                                size: 30,
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Text(
-                                "Contacts",
-                                style: TextStyle(fontSize: 15),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            )
-          ],
-        ));
+                  ),
+                ],
+              ),
+              
+        //   MyListItem(
+        //   title: 'Title 1',
+        //   subtitle: 'Subtitle 1',
+        //   leadingIcon: Icons.star,
+        //   onTap: () {
+        //     // Handle the click event
+        //     print('Item 1 clicked');
+        //   },
+        // ),
+
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
