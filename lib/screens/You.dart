@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/widgets/my_list_item.dart';
+
+import '../colors/theaming.dart';
 
 class You extends StatefulWidget {
   const You({super.key});
@@ -64,7 +67,7 @@ class _YouState extends State<You> {
                                 subtitle: Text("+91 7860775609"),
                                 trailing: Icon(
                                   Icons.check_circle,
-                                  color: Color(0xFF075E54),
+                                  color: AppColors.iconcolor,
                                 ),
                               ),
                               ListTile(
@@ -77,10 +80,10 @@ class _YouState extends State<You> {
                                   onPressed: () {},
                                   icon: const Icon(
                                     Icons.add_circle_outline,
-                                    color: Color(0xFF075E54),
+                                    color: AppColors.iconcolor,
                                   ),
                                 ),
-                                // : Icon(Icons.add_circle_outline, color: Color(0xFF075E54),),
+                                // : Icon(Icons.add_circle_outline, color: AppColors.iconcolor,),
                               )
                             ],
                           ),
@@ -103,7 +106,7 @@ class _YouState extends State<You> {
                   "The happiness of your life is depend upon the quality of your thoughts....💖",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 17, color: Color.fromARGB(255, 124, 123, 123)),
+                      fontSize: 17, color:AppColors.subtitle),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
                 ),
@@ -127,7 +130,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.person_pin,
-                              color: Color(0xFF075E54),
+                              color: AppColors.iconcolor,
                               size: 30,
                             ),
                             SizedBox(
@@ -159,7 +162,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.lock,
-                              color: Color(0xFF075E54),
+                              color: AppColors.iconcolor,
                               size: 30,
                             ),
                             SizedBox(
@@ -191,7 +194,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.contacts,
-                              color: Color(0xFF075E54),
+                              color: AppColors.iconcolor,
                               size: 30,
                             ),
                             SizedBox(
@@ -208,16 +211,7 @@ class _YouState extends State<You> {
                   ),
                 ],
               ),
-
-              //   MyListItem(
-              //   title: 'Title 1',
-              //   subtitle: 'Subtitle 1',
-              //   leadingIcon: Icons.star,
-              //   onTap: () {
-              //     // Handle the click event
-              //     print('Item 1 clicked');
-              //   },
-              // ),
+              Text("sfsl"),
             ],
           ),
         ],
