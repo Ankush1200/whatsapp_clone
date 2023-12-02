@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class You extends StatefulWidget {
@@ -44,12 +46,14 @@ class _YouState extends State<You> {
                   onPressed: () {
                     showModalBottomSheet(
                         context: context,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         builder: (BuildContext context) {
+                          // ignore: sized_box_for_whitespace
                           return Container(
                             height: 200,
                             child: ListView(
                               children: [
-                                const Icon(Icons.linear_scale_outlined),
+                                const Icon(Icons.linear_scale),
                                 const ListTile(
                                   leading: CircleAvatar(
                                       backgroundImage: AssetImage(
@@ -89,9 +93,9 @@ class _YouState extends State<You> {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
+                const SizedBox(
                   width: 300,
-                  child: const Text(
+                  child: Text(
                     "The happiness of your life is depend upon the quality of your thoughts....💖",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -106,84 +110,96 @@ class _YouState extends State<You> {
                 ),
                 Row(
                   children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 2,
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal:25.0, vertical: 10),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.person_pin,
-                              color: Color(0xFF075E54),
-                              size:30,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Profile",
-                              style: TextStyle(fontSize: 15),
-                            )
-                          ],
+                    InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: (){},
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        elevation: 2,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal:25.0, vertical: 10),
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.person_pin,
+                                color: Color(0xFF075E54),
+                                size:30,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Profile",
+                                style: TextStyle(fontSize: 15),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(
                       width:5,
                     ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 2,
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 23.0, vertical: 10),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.lock,
-                              color: Color(0xFF075E54),
-                              size: 30,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Privacy",
-                              style: TextStyle(fontSize: 15),
-                            )
-                          ],
+                    InkWell(
+                      onTap: (){},
+                      borderRadius: BorderRadius.circular(20),
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        elevation: 2,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 23.0, vertical: 10),
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.lock,
+                                color: Color(0xFF075E54),
+                                size: 30,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Privacy",
+                                style: TextStyle(fontSize: 15),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(
                       width:5,
                     ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 2,
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.contacts,
-                              color: Color(0xFF075E54),
-                              size: 30,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Contacts",
-                              style: TextStyle(fontSize: 15),
-                            )
-                          ],
+                    InkWell(
+                      onTap: (){},
+                      borderRadius:BorderRadius.circular(20),
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        elevation: 2,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10),
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.contacts,
+                                color: Color(0xFF075E54),
+                                size: 30,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                "Contacts",
+                                style: TextStyle(fontSize: 15),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
