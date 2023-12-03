@@ -16,7 +16,7 @@ class _YouState extends State<You> {
     return Scaffold(
       appBar: AppBar(
         
-        backgroundColor: AppColors.iconcolor,
+        backgroundColor: AppColors.defaultcolor,
         title: const Text("You"),
         actions: [
           Padding(
@@ -69,7 +69,7 @@ class _YouState extends State<You> {
                               subtitle: Text("+91 7860775609"),
                               trailing: Icon(
                                 Icons.check_circle,
-                                color: AppColors.iconcolor,
+                                color: AppColors.defaultcolor,
                               ),
                             ),
                             ListTile(
@@ -82,10 +82,10 @@ class _YouState extends State<You> {
                                 onPressed: () {},
                                 icon: const Icon(
                                   Icons.add_circle_outline,
-                                  color: AppColors.iconcolor,
+                                  color: AppColors.defaultcolor,
                                 ),
                               ),
-                              // : Icon(Icons.add_circle_outline, color: AppColors.iconcolor,),
+                              // : Icon(Icons.add_circle_outline, color: AppColors.defaultcolor,),
                             )
                           ],
                         ),
@@ -131,7 +131,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.person_pin,
-                              color: AppColors.iconcolor,
+                              color: AppColors.defaultcolor,
                               size: 30,
                             ),
                             SizedBox(
@@ -163,7 +163,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.lock,
-                              color: AppColors.iconcolor,
+                              color: AppColors.defaultcolor,
                               size: 30,
                             ),
                             SizedBox(
@@ -195,7 +195,7 @@ class _YouState extends State<You> {
                           children: [
                             Icon(
                               Icons.contacts,
-                              color: AppColors.iconcolor,
+                              color: AppColors.defaultcolor,
                               size: 30,
                             ),
                             SizedBox(

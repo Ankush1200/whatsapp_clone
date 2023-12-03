@@ -24,7 +24,7 @@ late TabController _controller;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.iconcolor,
+        backgroundColor: AppColors.defaultcolor,
         title: const Text("WhatsApp",style: TextStyle(fontSize:23,)),
         actions: [
           IconButton(onPressed: () {},icon: const Icon(Icons.camera_alt_outlined)),
