@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen>
             onSelected: (value){
                 if(value=='Settings'){
                   Get.to(()=>const You(),
-                  transition: Transition.rightToLeft,
+                  transition: Transition.rightToLeftWithFade,
                   );
                 }
             },

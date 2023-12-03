@@ -8,10 +8,11 @@ class ChatPage extends StatelessWidget {
     return Scaffold(
       body:ListView(
           children: const [
-            CustomCards(),
-            CustomCards(),
-            CustomCards(),
-            CustomCards(),
+            ChatList(),
+            ChatList(),
+            ChatList(),
+            ChatList(),
+            ChatList(),
             // MyCustomList(
             //     title: 'Dharmendra Baghel',
             //     subtitle: 'dagd',

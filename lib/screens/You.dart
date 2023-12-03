@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../colors/theaming.dart';
+import '../pages/chat_page.dart';
 
 class You extends StatefulWidget {
   const You({super.key});
@@ -28,11 +30,17 @@ class _YouState extends State<You> {
         children: [
           Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 30),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage("assets/images/profile.png"),
+                  // backgroundImage: AssetImage("assets/images/profile.png"),
+                  backgroundColor: Colors.grey,
                   radius: 50,
+                  // ignore: deprecated_member_use
+                  child: SvgPicture.asset(
+                    "assets/icons/person.svg",
+                    color: Colors.white,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -58,32 +66,35 @@ class _YouState extends State<You> {
                         child: ListView(
                           children: [
                             const Icon(Icons.linear_scale),
-                            const ListTile(
+                            ListTile(
                               leading: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage("assets/images/profile.png")),
-                              title: Text(
+                                backgroundColor: Colors.grey,
+                                child: SvgPicture.asset(
+                                  "assets/icons/person.svg",
+                                  // ignore: deprecated_member_use
+                                  color: Colors.white,
+                                ),
+                              ),
+                              title: const Text(
                                 "Ankush Prajapati",
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
-                              subtitle: Text("+91 7860775609"),
-                              trailing: Icon(
+                              subtitle: const Text("+91 7860775609"),
+                              trailing: const Icon(
                                 Icons.check_circle,
                                 color: AppColors.defaultcolor,
                               ),
                             ),
-                            ListTile(
+                            const ListTile(
                               // leading: CircleAvatar(backgroundImage: AssetImage("assets/images/profile.png")),
-                              title: const Text("Add another account",
+                              title: Text("Add another account",
                                   style:
                                       TextStyle(fontWeight: FontWeight.w500)),
                               // subtitle: Text("+91 7860775609"),
-                              leading: IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                  Icons.add_circle_outline,
-                                  color: AppColors.defaultcolor,
-                                ),
+                              leading: CircleAvatar(
+                                backgroundColor: Colors.grey,
+                                // ignore: deprecated_member_use
+                                child:Icon(Icons.add,size:25,color: AppColors.defaultcolor,)
                               ),
                               // : Icon(Icons.add_circle_outline, color: AppColors.defaultcolor,),
                             )
