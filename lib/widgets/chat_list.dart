@@ -28,8 +28,9 @@ class ChatList extends StatelessWidget {
             ]),
             leading: CircleAvatar(radius:23,
             backgroundColor: Colors.grey,
-            // ignore: deprecated_member_use
-            child:SvgPicture.asset(chatModel.icon,color: Colors.white,height:30,),
+            child:SvgPicture.asset(
+              // ignore: deprecated_member_use
+              chatModel.icon,color: Colors.white,height:35,),
             ),
             trailing: Column(children: [
               const SizedBox(height:10,),

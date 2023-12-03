@@ -13,22 +13,22 @@ class _ChatPageState extends State<ChatPage> {
   List<ChatModel> chatmodel = [
     ChatModel(
       name: "Ankush Prajapati",
-      icon: "assets/icons/groups.svg",
+      icon: "assets/icons/person.svg",
       isgroup: false,
       time: "5:26PM",
       currentmessage: "Hi Ankush",
     ),
     ChatModel(
-      name: "Vedant Singh",
-      icon: "assets/icons/person.svg",
+      name: "Placements",
+      icon: "assets/icons/groups.svg",
       isgroup: false,
       time: "10:06PM",
       currentmessage: "Happy birthday",
     ),
     ChatModel(
       name: "Nitin Prajapati",
-      icon: "assets/icons/groups.svg",
-      isgroup: true,
+      icon: "assets/icons/person.svg",
+      isgroup: false,
       time: "5:26AM",
       currentmessage: "Hi Ankush",
     ),
@@ -42,7 +42,7 @@ class _ChatPageState extends State<ChatPage> {
     ChatModel(
       name: "Home",
       icon: "assets/icons/groups.svg",
-      isgroup: false,
+      isgroup: true,
       time: "6:20PM",
       currentmessage: "Hi Everyone",
     ),
