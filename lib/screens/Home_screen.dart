@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whatsapp_clone/colors/theaming.dart';
-import 'package:whatsapp_clone/pages/chat_page.dart';
-import 'package:whatsapp_clone/screens/You.dart';
+import 'package:whatsapp_clone/Colors/theaming.dart';
+import 'package:whatsapp_clone/Pages/chat_page.dart';
+import 'package:whatsapp_clone/Screens/You.dart';
 
 
 class HomeScreen extends StatefulWidget {

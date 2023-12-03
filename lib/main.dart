@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:whatsapp_clone/colors/theaming.dart';
-import 'package:whatsapp_clone/screens/Home_screen.dart';
+import 'package:whatsapp_clone/Colors/theaming.dart';
+import 'package:whatsapp_clone/Screens/Home_screen.dart';
 void main() {
   runApp(const MyApp());
 }

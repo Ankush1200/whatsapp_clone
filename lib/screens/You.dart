@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../colors/theaming.dart';
-import '../pages/chat_page.dart';
+import '../Colors/theaming.dart';
+
 
 class You extends StatefulWidget {
   const You({super.key});
@@ -36,9 +36,9 @@ class _YouState extends State<You> {
                   // backgroundImage: AssetImage("assets/images/profile.png"),
                   backgroundColor: Colors.grey,
                   radius: 50,
-                  // ignore: deprecated_member_use
                   child: SvgPicture.asset(
                     "assets/icons/person.svg",
+                    // ignore: deprecated_member_use
                     color: Colors.white,
                   ),
                 ),

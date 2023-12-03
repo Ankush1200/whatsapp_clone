@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:whatsapp_clone/screens/You.dart';
+import 'package:whatsapp_clone/Screens/You.dart';
 
 
 class ChatList extends StatelessWidget {
