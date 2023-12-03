@@ -15,7 +15,6 @@ class _YouState extends State<You> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
         backgroundColor: AppColors.defaultcolor,
         title: const Text("You"),
         actions: [
@@ -44,7 +43,10 @@ class _YouState extends State<You> {
               TextButton(
                 child: const Text(
                   "Ankush Prajapati⌄",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: AppColors.textcolor),
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.textcolor),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -105,7 +107,7 @@ class _YouState extends State<You> {
               const SizedBox(
                 width: 300,
                 child: Text(
-                  "The happiness of your life is depend upon the quality of your thoughts....💖",
+                  "The happiness of your life is depend upon the quality of your thoughts..💖 Happy coding.....",
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 17, color: AppColors.subtitle),
                   overflow: TextOverflow.ellipsis,
@@ -212,6 +214,20 @@ class _YouState extends State<You> {
                   ),
                 ],
               ),
+              // ListView(
+              //   scrollDirection: Axis.horizontal,
+              //   shrinkWrap: true,
+              //   children: [
+              //     MyCustomList(
+              //       title: 'hi',
+              //       subtitle: 'hfs',
+              //       leadingIcon: const CircleAvatar(
+              //           backgroundImage:
+              //               AssetImage("assets/images/profile.png")),
+              //       onTap: () {},
+              //     )
+              //   ],
+              // )
             ],
           ),
         ],

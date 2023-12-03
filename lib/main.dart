@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         theme: ThemeData(
           // useMaterial3: true,
+          fontFamily:'OpenSans',
           colorScheme: ColorScheme.fromSeed(
             seedColor: AppColors.defaultcolor,
           ),
