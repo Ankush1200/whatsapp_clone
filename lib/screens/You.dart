@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/widgets/my_cutom_list.dart';
-
 import '../colors/theaming.dart';
 
 class You extends StatefulWidget {

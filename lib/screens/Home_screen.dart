@@ -1,10 +1,10 @@
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_clone/colors/theaming.dart';
 import 'package:whatsapp_clone/pages/chat_page.dart';
 import 'package:whatsapp_clone/screens/You.dart';
 
-import 'package:whatsapp_clone/widgets/my_cutom_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,13 +35,12 @@ class _HomeScreenState extends State<HomeScreen>
               fontWeight: FontWeight.bold
             )),
         actions: [
-          IconButton(
-              onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search_rounded)),
           PopupMenuButton<String>(
             onSelected: (value){
                 if(value=='Settings'){
-                  Get.to(()=>You(),
+                  Get.to(()=>const You(),
                   transition: Transition.rightToLeft,
                   );
                 }
@@ -49,24 +48,24 @@ class _HomeScreenState extends State<HomeScreen>
             itemBuilder: (BuildContext context) {
               return const[
                 PopupMenuItem(
-                  child: Text("New Group"),
                   value: 'New Group',
+                  child: Text("New Group"),
                 ),
                 PopupMenuItem(
-                  child: Text("New Brodcast"),
                   value: 'New Brodcast',
+                  child: Text("New Brodcast"),
                 ),
                 PopupMenuItem(
-                  child: Text("Whatsapp Web"),
                   value: 'Whatsapp Web',
+                  child: Text("Whatsapp Web"),
                 ),
                 PopupMenuItem(
-                  child: Text("Shared Messages"),
                   value: 'Shared Messages',
+                  child: Text("Shared Messages"),
                 ),
                 PopupMenuItem(
-                  child: Text("Settings"),
                   value: 'Settings',
+                  child: Text("Settings"),
                 ),
               ];
             },
@@ -92,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen>
           ],
         ),
       ),
-      body: TabBarView(controller: _controller, children: [
+      body: TabBarView(controller: _controller, children: const [
         Center(child: Text("Community")),
         ChatPage(),
         Center(child: Text("Updates")),
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen>
         onPressed: (){},
         backgroundColor: AppColors.defaultcolor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Icon(Icons.chat),
+        child: const Icon(Icons.chat),
         ),
     );
   }
