@@ -15,7 +15,7 @@ class _YouState extends State<You> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.defaultcolor,
+        // backgroundColor: AppColors.defaultcolor,
         title: const Text("You"),
         actions: [
           Padding(

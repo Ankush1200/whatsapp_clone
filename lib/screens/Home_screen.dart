@@ -2,8 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
-import 'package:whatsapp_clone/Pages/chat_page.dart';
+
 import 'package:whatsapp_clone/Screens/You.dart';
+
+import '../pages/chat_page.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.defaultcolor,
+        // backgroundColor: AppColors.defaultcolor,
         title: const Text("WhatsApp",
             style: TextStyle(
               fontSize: 23,

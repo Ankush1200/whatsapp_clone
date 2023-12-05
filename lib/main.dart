@@ -16,9 +16,18 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           // useMaterial3: true,
           fontFamily:'OpenSans',
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: AppColors.defaultcolor,
-          ),
+          // colorScheme: ColorScheme.fromSeed(
+          //   seedColor: AppColors.defaultcolor,
+          // ),
+          appBarTheme: const AppBarTheme(
+            color: AppColors.defaultcolor,
+            // iconTheme: IconThemeData(color:Colors.white),
+            // titleTextStyle: TextStyle(color: AppColors.appBarTextcolor,
+            // fontSize: 20,
+            // fontWeight: FontWeight.bold,
+            // fontFamily: 'OpenSans',
+            // )
+          )
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

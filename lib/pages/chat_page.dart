@@ -21,7 +21,7 @@ class _ChatPageState extends State<ChatPage> {
     ChatModel(
       name: "Placements",
       icon: "assets/icons/groups.svg",
-      isgroup: false,
+      isgroup: true,
       time: "10:06PM",
       currentmessage: "Happy birthday",
     ),
@@ -60,8 +60,9 @@ class _ChatPageState extends State<ChatPage> {
       body:ListView.builder(
         itemCount: chatmodel.length,
         itemBuilder: (context, index) {
-        return ChatList(chatModel:chatmodel[index],);
-      }),
+        return ChatList(chatModel:chatmodel[index]);
+      },
+),
     );
   }
 }
@@ -72,4 +73,5 @@ class _ChatPageState extends State<ChatPage> {
           //     subtitle: 'dagd',
           //     leadingIcon: CircleAvatar(
           //         backgroundImage: AssetImage("assets/images/profile.png")),
-          //     onTap: () {}),
+          //     onTap: () {},
+          // ),
