@@ -21,13 +21,13 @@ class MyApp extends StatelessWidget {
           // ),
           appBarTheme: const AppBarTheme(
             color: AppColors.defaultcolor,
-            // iconTheme: IconThemeData(color:Colors.white),
-            // titleTextStyle: TextStyle(color: AppColors.appBarTextcolor,
-            // fontSize: 20,
-            // fontWeight: FontWeight.bold,
-            // fontFamily: 'OpenSans',
-            // )
-          )
+            iconTheme: IconThemeData(color:Colors.white),
+            titleTextStyle: TextStyle(color: AppColors.appBarTextcolor,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OpenSans',
+            ),
+          ),
         ),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',

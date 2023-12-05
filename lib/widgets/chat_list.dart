@@ -13,9 +13,10 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(()=>const IndividualChat(),
-              transition: Transition.rightToLeftWithFade
-        );
+        Get.to(() => IndividualChat(
+              chatModel: chatModel,
+              transition: Transition.rightToLeftWithFade,
+            ));
         // Navigator.push(
         //   context,
         //   MaterialPageRoute(builder: (context) => const IndividualChat()),
@@ -45,9 +46,8 @@ class ChatList extends StatelessWidget {
               child: SvgPicture.asset(
                 chatModel.isgroup
                     ? "assets/icons/groups.svg"
-                    : "assets/icons/person.svg"
+                    : "assets/icons/person.svg",
                 // ignore: deprecated_member_use
-                ,
                 color: Colors.white,
                 height: 35,
               ),
