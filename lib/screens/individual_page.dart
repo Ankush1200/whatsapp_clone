@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:whatsapp_clone/Colors/theaming.dart';
 import '../Model/chatmodel.dart';
 
 class IndividualChat extends StatefulWidget {
@@ -20,6 +21,7 @@ class _IndividualChatState extends State<IndividualChat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.blueGrey,
       appBar: AppBar(
           titleSpacing: 10,
           leadingWidth: 65,
@@ -44,7 +46,7 @@ class _IndividualChatState extends State<IndividualChat> {
             ),
           ),
           title: InkWell(
-            onTap: (){},
+            onTap: () {},
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,9 +68,7 @@ class _IndividualChatState extends State<IndividualChat> {
                 onPressed: () {}, icon: const Icon(Icons.videocam_rounded)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.call)),
             PopupMenuButton<String>(
-              onSelected: (value){
-
-              },
+              onSelected: (value) {},
               itemBuilder: (BuildContext context) {
                 return const [
                   PopupMenuItem(
@@ -99,7 +99,70 @@ class _IndividualChatState extends State<IndividualChat> {
               },
             ),
           ]),
-      body: Container(),
+      body: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Stack(
+            children: [
+              ListView(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width - 55,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          child: TextFormField(
+                            textAlignVertical: TextAlignVertical.center,
+                            minLines: 1,
+                            maxLines: 5,
+                            decoration: InputDecoration(
+                                prefixIcon: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                        Icons.emoji_emotions_outlined)),
+                                suffixIcon: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.attach_file),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon:
+                                          const Icon(Icons.camera_alt_rounded),
+                                    ),
+                                  ],
+                                ),
+                                //border: OutlineInputBorder(borderRadius: BorderRadius.circular(50),),
+                                hintText: 'Message',
+                                border: InputBorder.none,
+                                hintStyle: const TextStyle(
+                                    fontWeight: FontWeight.bold),
+                                contentPadding: const EdgeInsets.all(8.0)),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      CircleAvatar(
+                        backgroundColor: AppColors.defaultcolor,
+                        radius: 24,
+                        child: IconButton(
+                          onPressed: () {}, icon: const Icon(Icons.mic,color:Colors.white,)),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
