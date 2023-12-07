@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
+import 'package:whatsapp_clone/Screens/Select_contacts.dart';
 
 import 'package:whatsapp_clone/Screens/You.dart';
 
@@ -100,7 +101,9 @@ class _HomeScreenState extends State<HomeScreen>
         Center(child: Text("Calls")),
       ]),
       floatingActionButton:FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.push(context,MaterialPageRoute(builder: (builder)=>const SelectContacts()));
+        },
         backgroundColor: AppColors.defaultcolor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         child: const Icon(Icons.chat),
