@@ -5,8 +5,16 @@ class SelectContacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      
+    return Scaffold(
+      appBar: AppBar(
+        titleSpacing:2,
+        title: const Text("Select Contacts"),
+        actions: const [
+          Icon(Icons.search_rounded),
+          Icon(Icons.more_vert),
+          SizedBox(width: 5,)
+        ],
+      ),
     );
   }
 }

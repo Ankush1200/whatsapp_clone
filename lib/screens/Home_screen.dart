@@ -43,9 +43,7 @@ class _HomeScreenState extends State<HomeScreen>
           PopupMenuButton<String>(
             onSelected: (value){
                 if(value=='Settings'){
-                  Get.to(()=>const You(),
-                  transition: Transition.rightToLeftWithFade,
-                  );
+                  Navigator.push(context,MaterialPageRoute(builder: (builder)=>const You()));
                 }
             },
             itemBuilder: (BuildContext context) {

@@ -159,6 +159,7 @@ class _IndividualChatState extends State<IndividualChat> {
                                   suffixIcon: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
+                            // Attached file using model bottum sheeet
                                       IconButton(
                                         onPressed: () {
                                           showModalBottomSheet(
