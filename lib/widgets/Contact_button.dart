@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
-import 'package:whatsapp_clone/Model/chatmodel.dart';
+
 
 class ContactButton extends StatelessWidget {
   
