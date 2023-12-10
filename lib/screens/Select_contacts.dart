@@ -13,46 +13,22 @@ class SelectContacts extends StatefulWidget {
 
 class _SelectContactsState extends State<SelectContacts> {
   List<ChatModel> contacts = [
-    ChatModel(
-      name: "Anksuh Prajapati(YOU)",
-      icon: "assets/icons/person.svg",
-      status: "App Developer",
-    ),
-    ChatModel(
-      name: "Rakesh Maurya",
-      icon: "assets/icons/person.svg",
-      status: "Hi there I am using whatapp",
-    ),
-    ChatModel(
-      name: "Nitin Prajapati",
-      icon: "assets/icons/person.svg",
-      status: "Student",
-    ),
-    ChatModel(
-      name: "Saurabh Dubey",
-      icon: "assets/icons/person.svg",
-      status: "Follow Dream",
-    ),
-    ChatModel(
-      name: "Jay",
-      icon: "assets/icons/person.svg",
-      status: "All is Good",
-    ),
-    ChatModel(
-      name: "Piyush Prajapati",
-      icon: "assets/icons/person.svg",
-      status: "YouTuber",
-    ),
-    ChatModel(
-      name: "Rohan Jayswaal",
-      icon: "assets/icons/person.svg",
-      status: "Whatsapp only",
-    ),
-    ChatModel(
-      name: "Mammi",
-      icon: "assets/icons/person.svg",
-      status: "Hi there I am using whatsapp",
-    ),
+    ChatModel(name: "Anksuh Prajapati(YOU)",icon: "assets/icons/person.svg",status: "Message Yourself",),
+    ChatModel(name: "Rakesh Maurya",icon: "assets/icons/person.svg",status: "Hi there I am using whatapp",),
+    ChatModel(name: "Nitin Prajapati",icon: "assets/icons/person.svg",status: "Student",),
+    ChatModel(name: "Saurabh Dubey",icon: "assets/icons/person.svg",status: "Follow Dream",),
+    ChatModel(name: "Jay",icon: "assets/icons/person.svg",status: "All is Good",),
+    ChatModel(name: "Piyush Prajapati",icon: "assets/icons/person.svg",status: "YouTuber",),
+    ChatModel(name: "Rohan Jayswaal",icon: "assets/icons/person.svg",status: "Whatsapp Only",),
+    ChatModel(name: "Mammi",icon: "assets/icons/person.svg",status: "Hi there I am using whatsapp",),
+    ChatModel(name: "Gurmeet Singhla",icon: "assets/icons/person.svg",status: "App Developer",),
+    ChatModel(name: "Vedant Singh",icon: "assets/icons/person.svg",status: "Hi there I am using whatapp",),
+    ChatModel(name: "Nishant Prajapati",icon: "assets/icons/person.svg",status: "Student",),
+    ChatModel(name: "Yash Jayswaal Dubey",icon: "assets/icons/person.svg",status: "At TCS",),
+    ChatModel(name: "Raj Yadav",icon: "assets/icons/person.svg",status: "Whatsapp Only",),
+    ChatModel(name: "Raunak Prajapati",icon: "assets/icons/person.svg",status: "At Home",),
+    ChatModel(name: "Aman Mishra",icon: "assets/icons/person.svg",status: "At Home",),
+    ChatModel(name: "Kushagra Gupta",icon: "assets/icons/person.svg",status: "Flutter Developer",),
   ];
 
   @override
@@ -65,7 +41,7 @@ class _SelectContactsState extends State<SelectContacts> {
             children: [
               Text("Select Contacts"),
               Text(
-                "164 contacts",
+                "16 contacts",
                 style: TextStyle(fontSize: 12),
               )
             ],
