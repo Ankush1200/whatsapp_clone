@@ -58,6 +58,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:ListView.builder(
+        physics: const BouncingScrollPhysics(),
         itemCount: chatmodel.length,
         itemBuilder: (context, index) {
         return ChatList(chatModel:chatmodel[index]);
