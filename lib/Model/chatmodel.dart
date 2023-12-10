@@ -5,6 +5,7 @@ class ChatModel{
   String time;
   bool isgroup;
   String status;
+  bool isselected;
 
   ChatModel({
    this.name='',
@@ -13,6 +14,7 @@ class ChatModel{
    this.time='',
    this.currentmessage='',
    this.status='',
+   this.isselected=false,
  });
 
 }

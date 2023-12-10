@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
-import 'package:whatsapp_clone/Screens/Select_contacts.dart';
+import 'package:whatsapp_clone/Screens/select_contacts.dart';
 
-import 'package:whatsapp_clone/Screens/You.dart';
+import 'package:whatsapp_clone/Screens/you.dart';
 
 import '../pages/chat_page.dart';
 
@@ -16,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen>
-    with SingleTickerProviderStateMixin {
+  with SingleTickerProviderStateMixin {
   late TabController _controller;
 
   @override
@@ -70,14 +70,6 @@ class _HomeScreenState extends State<HomeScreen>
               ];
             },
           ),
-          // Padding(
-          //   padding: const EdgeInsets.only(right:10),
-          //   child: IconButton(onPressed: () {
-          //     Get.to(()=>const You(),
-          //     transition:Transition.rightToLeft
-          //     );
-          //   }, icon: const CircleAvatar(backgroundImage:AssetImage("assets/images/profile.png"),)),
-          // ),
         ],
         bottom: TabBar(
           indicatorColor: Colors.white,

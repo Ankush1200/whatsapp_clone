@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:whatsapp_clone/Model/chatmodel.dart';
 
 import 'package:whatsapp_clone/Screens/individual_page.dart';
@@ -13,14 +12,12 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(() => IndividualChat(
-              chatModel: chatModel,
-              transition: Transition.rightToLeftWithFade,
-            ));
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => const IndividualChat()),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => IndividualChat(
+            chatModel: chatModel,
+          )),
+        );
       },
       child: Column(
         children: [

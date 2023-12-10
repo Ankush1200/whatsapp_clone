@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Model/chatmodel.dart';
+import 'package:whatsapp_clone/Screens/new_group.dart';
 
 import '../Widgets/Contact_button.dart';
 import '../Widgets/Contact_list.dart';
@@ -24,7 +25,7 @@ class _SelectContactsState extends State<SelectContacts> {
     ChatModel(name: "Gurmeet Singhla",icon: "assets/icons/person.svg",status: "App Developer",),
     ChatModel(name: "Vedant Singh",icon: "assets/icons/person.svg",status: "Hi there I am using whatapp",),
     ChatModel(name: "Nishant Prajapati",icon: "assets/icons/person.svg",status: "Student",),
-    ChatModel(name: "Yash Jayswaal Dubey",icon: "assets/icons/person.svg",status: "At TCS",),
+    ChatModel(name: "Yash Jayswaal",icon: "assets/icons/person.svg",status: "At TCS",),
     ChatModel(name: "Raj Yadav",icon: "assets/icons/person.svg",status: "Whatsapp Only",),
     ChatModel(name: "Raunak Prajapati",icon: "assets/icons/person.svg",status: "At Home",),
     ChatModel(name: "Aman Mishra",icon: "assets/icons/person.svg",status: "At Home",),
@@ -81,7 +82,11 @@ class _SelectContactsState extends State<SelectContacts> {
             itemCount:contacts.length+3,
             itemBuilder: (context, index) {
               if(index==0){
-                return const ContactButton(name: 'New Group', icon: Icons.group,);
+                return InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>const NewGroupPage()));
+                  },
+                  child: const ContactButton(name: 'New Group', icon: Icons.group,));
               }
               if(index==1){
                return const ContactButton(name:'New Contact',icon: Icons.person_add,);
@@ -89,8 +94,11 @@ class _SelectContactsState extends State<SelectContacts> {
               if(index==2){
                return const ContactButton(name:'New Community',icon: Icons.groups);
               }
-              return ContactList(
-                chatModel: contacts[index-3],
+              return InkWell(
+                onTap: (){},
+                child: ContactList(
+                  chatModel: contacts[index-3],
+                ),
               );
             }));
   }
