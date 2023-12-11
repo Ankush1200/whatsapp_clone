@@ -4,6 +4,7 @@ import 'package:whatsapp_clone/Screens/new_group.dart';
 
 import '../Widgets/Contact_button.dart';
 import '../Widgets/Contact_list.dart';
+import 'New_contact.dart';
 
 class SelectContacts extends StatefulWidget {
   const SelectContacts({super.key});
@@ -89,7 +90,11 @@ class _SelectContactsState extends State<SelectContacts> {
                   child: const ContactButton(name: 'New Group', icon: Icons.group,));
               }
               if(index==1){
-               return const ContactButton(name:'New Contact',icon: Icons.person_add,);
+               return InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const AddNewContact()));
+                },
+                child: const ContactButton(name:'New Contact',icon: Icons.person_add,));
               }
               if(index==2){
                return const ContactButton(name:'New Community',icon: Icons.groups);
