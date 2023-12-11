@@ -56,24 +56,27 @@ class _NewGroupPageState extends State<NewGroupPage> {
         children: [
           ListView.builder(
                 physics: const BouncingScrollPhysics(),
-                itemCount:contacts.length,
+                itemCount:contacts.length+1,
                 itemBuilder: (context, index) {
+                  if(index==0){
+                    return  Container(height:selectedContect.isNotEmpty?70:0);
+                  }
                   return InkWell(
                     onTap: (){
-                      if(contacts[index].isselected==false){
+                      if(contacts[index-1].isselected==false){
                         setState(() {
-                          contacts[index].isselected=true;
-                          selectedContect.add(contacts[index]);
+                          contacts[index-1].isselected=true;
+                          selectedContect.add(contacts[index-1]);
                         });
                       }else{
                         setState(() {
-                          contacts[index].isselected=false;
-                          selectedContect.remove(contacts[index]);
+                          contacts[index-1].isselected=false;
+                          selectedContect.remove(contacts[index-1]);
                         });
                       }
                     },
                     child: ContactList(
-                      chatModel: contacts[index],
+                      chatModel: contacts[index-1],
                     ),
                   );
                 },),
@@ -86,7 +89,14 @@ class _NewGroupPageState extends State<NewGroupPage> {
                         scrollDirection: Axis.horizontal,
                         itemCount: selectedContect.length,
                         itemBuilder: (context,index){
-                          return const SelectedAvtaar();
+                          return InkWell( 
+                            onTap: (){
+                              setState(() {
+                                selectedContect[index].isselected=false;
+                                selectedContect.remove(selectedContect[index]);
+                              });
+                            },
+                            child: SelectedAvtaar(chatModel:selectedContect[index]),);
                         })
                     ),
                      const Divider(thickness: 1,height: 0,),

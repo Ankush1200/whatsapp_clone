@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 // import 'package:flutter/rendering.dart
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:whatsapp_clone/Model/chatmodel.dart';
 
 class SelectedAvtaar extends StatelessWidget {
-  const SelectedAvtaar({super.key});
+  final ChatModel chatModel;
+  const SelectedAvtaar({super.key, required this.chatModel});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +37,7 @@ class SelectedAvtaar extends StatelessWidget {
               ),
             ],
           ),
-          const Text("Hi"),
+          Text(chatModel.name),
         ],
       ),
     );
