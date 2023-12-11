@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Model/chatmodel.dart';
+import 'package:whatsapp_clone/Screens/New%20Community.dart';
 import 'package:whatsapp_clone/Screens/new_group.dart';
 
 import '../Widgets/Contact_button.dart';
@@ -97,7 +98,11 @@ class _SelectContactsState extends State<SelectContacts> {
                 child: const ContactButton(name:'New Contact',icon: Icons.person_add,));
               }
               if(index==2){
-               return const ContactButton(name:'New Community',icon: Icons.groups);
+               return InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const NewCommunity()));
+                },
+                child: const ContactButton(name:'New Community',icon: Icons.groups));
               }
               return InkWell(
                 onTap: (){},

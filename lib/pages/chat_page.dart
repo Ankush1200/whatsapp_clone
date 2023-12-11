@@ -53,6 +53,41 @@ class _ChatPageState extends State<ChatPage> {
       time: "02:52AM",
       currentmessage: "Hi Ankush",
     ),
+    ChatModel(
+      name: "Abhishek Vishwakarma",
+      icon: "assets/icons/person.svg",
+      isgroup: false,
+      time: "02:52AM",
+      currentmessage: "Please Subscribe us👆",
+    ),
+    ChatModel(
+      name: "Carrer Boost",
+      icon: "assets/icons/person.svg",
+      isgroup:true,
+      time: "02:52AM",
+      currentmessage: "Hello everyone",
+    ),
+    ChatModel(
+      name: "Rishabh Rajora",
+      icon: "assets/icons/person.svg",
+      isgroup: false,
+      time: "02:52AM",
+      currentmessage: "Photo bhej de bhai",
+    ),
+    ChatModel(
+      name: "Papa",
+      icon: "assets/icons/person.svg",
+      isgroup: false,
+      time: "02:52AM",
+      currentmessage: "Hi",
+    ),
+    ChatModel(
+      name: "Ratan Garg",
+      icon: "assets/icons/person.svg",
+      isgroup: false,
+      time: "02:06AM",
+      currentmessage: "Hey Bro👋",
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -67,12 +102,3 @@ class _ChatPageState extends State<ChatPage> {
     );
   }
 }
-
-
- // MyCustomList(
-          //     title: 'Dharmendra Baghel',
-          //     subtitle: 'dagd',
-          //     leadingIcon: CircleAvatar(
-          //         backgroundImage: AssetImage("assets/images/profile.png")),
-          //     onTap: () {},
-          // ),
