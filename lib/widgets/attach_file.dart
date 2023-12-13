@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Screens/Camera_Access.dart';
+
 class AttachFile extends StatelessWidget {
   const AttachFile({super.key});
 
@@ -43,8 +45,6 @@ class AttachFile extends StatelessWidget {
                   iconCreation(Icons.currency_rupee,"Payment", Colors.green),
                   const SizedBox(height:90,width: 22,),
                   iconCreation(Icons.poll,"Poll", Colors.deepPurple),
-                  // const SizedBox(height:80,width: 15,),
-                  // iconCreation(Icons.photo_size_select_actual,"Gallery", Colors.purple),
               ],),
             ),
           ],
@@ -57,7 +57,8 @@ class AttachFile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround, 
       children: [
         InkWell(
-          onTap: (){},
+          onTap: (){
+          },
           child: CircleAvatar(
             backgroundColor: color,
             radius:28,

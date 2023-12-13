@@ -2,6 +2,7 @@ import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
+import 'package:whatsapp_clone/Screens/Camera_Access.dart';
 import 'package:whatsapp_clone/Widgets/Attach_file.dart';
 import '../Model/chatmodel.dart';
 
@@ -169,7 +170,9 @@ class _IndividualChatState extends State<IndividualChat> {
                                         icon: const Icon(Icons.attach_file),
                                       ),
                                       IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(context,MaterialPageRoute(builder: (builder)=>const CameraAccess()));
+                                        },
                                         icon: const Icon(
                                             Icons.camera_alt_rounded),
                                       ),

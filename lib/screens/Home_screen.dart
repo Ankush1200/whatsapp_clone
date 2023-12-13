@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
+import 'package:whatsapp_clone/Screens/Camera_Access.dart';
+import 'package:whatsapp_clone/Screens/new_group.dart';
 import 'package:whatsapp_clone/Screens/select_contacts.dart';
 
 import 'package:whatsapp_clone/Screens/you.dart';
@@ -37,12 +39,16 @@ class _HomeScreenState extends State<HomeScreen>
               fontWeight: FontWeight.bold
             )),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined)),
+          IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (builder)=>const CameraAccess()));
+          }, icon: const Icon(Icons.camera_alt_outlined)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.search_rounded)),
           PopupMenuButton<String>(
             onSelected: (value){
                 if(value=='Settings'){
                   Navigator.push(context,MaterialPageRoute(builder: (builder)=>const You()));
+                }else if(value=='New Group'){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>const NewGroupPage()));
                 }
             },
             itemBuilder: (BuildContext context) {
@@ -56,8 +62,8 @@ class _HomeScreenState extends State<HomeScreen>
                   child: Text("New Brodcast"),
                 ),
                 PopupMenuItem(
-                  value: 'Whatsapp Web',
-                  child: Text("Whatsapp Web"),
+                  value: 'Linked devices',
+                  child: Text("Linked devices"),
                 ),
                 PopupMenuItem(
                   value: 'Shared Messages',
