@@ -3,9 +3,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
-
 import 'Camera_view.dart';
 
 
@@ -21,12 +18,14 @@ class CameraAccess extends StatefulWidget {
 class _CameraAccessState extends State<CameraAccess> {
   late CameraController cameraController;
   late Future<void> cameravalue;
+  late FlashMode currentflashmode=FlashMode.off;
 
   @override
   void initState() {
     super.initState();
     cameraController = CameraController(cameras[0], ResolutionPreset.high);
     cameravalue = cameraController.initialize();
+    cameraController.setFlashMode(FlashMode.off);
   }
 
   @override
@@ -52,7 +51,11 @@ class _CameraAccessState extends State<CameraAccess> {
               color: Colors.white,
             )),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.flash_off)),
+          IconButton(onPressed: () {
+            setState(() {
+              currentflashmode=FlashMode.auto;
+            });
+          }, icon: currentflashmode==FlashMode.auto?const Icon(Icons.flash_auto):const Icon(Icons.flash_off)),
           const SizedBox(
             width: 20,
           )
