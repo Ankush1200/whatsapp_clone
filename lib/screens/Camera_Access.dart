@@ -1,6 +1,13 @@
+
+
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
+
+import 'Camera_view.dart';
+
 
 List<CameraDescription> cameras = [];
 
@@ -13,23 +20,21 @@ class CameraAccess extends StatefulWidget {
 
 class _CameraAccessState extends State<CameraAccess> {
   late CameraController cameraController;
-
   late Future<void> cameravalue;
 
   @override
   void initState() {
     super.initState();
-
     cameraController = CameraController(cameras[0], ResolutionPreset.high);
     cameravalue = cameraController.initialize();
   }
 
-  // @override
-  // void dispose() {
-  //   // Dispose of the camera controller when the widget is disposed
-  //   cameraController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    // Dispose of the camera controller when the widget is disposed
+    cameraController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,15 +44,15 @@ class _CameraAccessState extends State<CameraAccess> {
         backgroundColor: Colors.black,
         automaticallyImplyLeading: false,
         leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.clear_rounded,
-                color: Colors.white,
-              )),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.clear_rounded,
+              color: Colors.white,
+            )),
         actions: [
-          IconButton(onPressed: (){},icon: const Icon(Icons.flash_off)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.flash_off)),
           const SizedBox(
             width: 20,
           )
@@ -90,8 +95,11 @@ class _CameraAccessState extends State<CameraAccess> {
                               Icons.photo,
                               color: Colors.white,
                             )),
-                            InkWell(onTap: (){},
-                            child:const Icon(
+                        InkWell(
+                            onTap: () {
+                              takePhoto(context);
+                            },
+                            child: const Icon(
                               Icons.panorama_fish_eye,
                               color: Colors.white,
                               weight: 5,
@@ -103,7 +111,9 @@ class _CameraAccessState extends State<CameraAccess> {
                                 color: Colors.white)),
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    const SizedBox(
+                      height: 10,
+                    ),
                     const Text(
                       "Hold for Video Tap for Photos",
                       style: TextStyle(
@@ -115,5 +125,15 @@ class _CameraAccessState extends State<CameraAccess> {
         ],
       ),
     );
+  }
+  void takePhoto(BuildContext context) async {
+    XFile file = await cameraController.takePicture();
+    // ignore: use_build_context_synchronously
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (builder) => CameraView(
+                  path: file.path,
+                )));
   }
 }
