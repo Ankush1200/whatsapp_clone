@@ -5,7 +5,7 @@ import 'package:whatsapp_clone/Screens/Camera_Access.dart';
 import 'package:whatsapp_clone/Screens/new_group.dart';
 import 'package:whatsapp_clone/Screens/select_contacts.dart';
 
-import 'package:whatsapp_clone/Screens/you.dart';
+import 'package:whatsapp_clone/Screens/settings.dart';
 
 import '../pages/chat_page.dart';
 

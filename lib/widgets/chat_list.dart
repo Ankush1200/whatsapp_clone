@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:whatsapp_clone/Model/chatmodel.dart';
+import 'package:whatsapp_clone/Model/chat_model.dart';
 
 import 'package:whatsapp_clone/Screens/individual_page.dart';
 

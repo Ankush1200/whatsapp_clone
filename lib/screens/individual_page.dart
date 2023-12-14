@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
 import 'package:whatsapp_clone/Screens/Camera_Access.dart';
 import 'package:whatsapp_clone/Widgets/Attach_file.dart';
-import '../Model/chatmodel.dart';
+import '../Model/chat_model.dart';
 
 class IndividualChat extends StatefulWidget {
   final ChatModel chatModel;

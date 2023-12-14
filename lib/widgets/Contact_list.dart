@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
-import 'package:whatsapp_clone/Model/chatmodel.dart';
+import 'package:whatsapp_clone/Model/chat_model.dart';
 
 class ContactList extends StatelessWidget {
   final ChatModel chatModel;

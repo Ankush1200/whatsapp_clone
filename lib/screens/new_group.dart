@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
 import 'package:whatsapp_clone/Widgets/selected_avtaar.dart';
-import '../Model/chatmodel.dart';
+import '../Model/chat_model.dart';
 import '../Widgets/Contact_list.dart';
 
 class NewGroupPage extends StatefulWidget {

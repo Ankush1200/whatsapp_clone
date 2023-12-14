@@ -44,7 +44,7 @@ class AttachFile extends StatelessWidget {
                 children: [
                   iconCreation(Icons.currency_rupee,"Payment", Colors.green),
                   const SizedBox(height:90,width: 22,),
-                  iconCreation(Icons.poll,"Poll", Colors.deepPurple),
+                  iconCreation(Icons.bar_chart,"Poll", Colors.deepPurple),
               ],),
             ),
           ],

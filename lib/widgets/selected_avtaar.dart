@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 // import 'package:flutter/rendering.dart
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:whatsapp_clone/Model/chatmodel.dart';
+import 'package:whatsapp_clone/Model/chat_model.dart';
 
 class SelectedAvtaar extends StatelessWidget {
   final ChatModel chatModel;
