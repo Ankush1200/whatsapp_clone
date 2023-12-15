@@ -1,10 +1,8 @@
 
-
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Camera_view.dart';
-
 
 List<CameraDescription> cameras = [];
 
@@ -18,7 +16,7 @@ class CameraAccess extends StatefulWidget {
 class _CameraAccessState extends State<CameraAccess> {
   late CameraController cameraController;
   late Future<void> cameravalue;
-  late FlashMode currentflashmode=FlashMode.off;
+  late FlashMode currentflashmode = FlashMode.off;
 
   @override
   void initState() {
@@ -51,11 +49,20 @@ class _CameraAccessState extends State<CameraAccess> {
               color: Colors.white,
             )),
         actions: [
-          IconButton(onPressed: () {
-            setState(() {
-              currentflashmode=FlashMode.auto;
-            });
-          }, icon: currentflashmode==FlashMode.auto?const Icon(Icons.flash_auto):const Icon(Icons.flash_off)),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                if (currentflashmode != FlashMode.auto) {
+                  currentflashmode = FlashMode.auto;
+                } else {
+                  currentflashmode = FlashMode.off;
+                }
+              });
+            },
+            icon: currentflashmode == FlashMode.auto
+                ? const Icon(Icons.flash_auto)
+                : const Icon(Icons.flash_off),
+          ),
           const SizedBox(
             width: 20,
           )
@@ -69,7 +76,7 @@ class _CameraAccessState extends State<CameraAccess> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 return SizedBox(
-                    height: MediaQuery.of(context).size.height / 1.2,
+                    height: MediaQuery.of(context).size.height / 1.3,
                     width: MediaQuery.of(context).size.width,
                     child: CameraPreview(cameraController));
               } else {
@@ -129,6 +136,7 @@ class _CameraAccessState extends State<CameraAccess> {
       ),
     );
   }
+
   void takePhoto(BuildContext context) async {
     XFile file = await cameraController.takePicture();
     // ignore: use_build_context_synchronously

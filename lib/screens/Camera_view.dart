@@ -27,7 +27,7 @@ class CameraView extends StatelessWidget {
         child: Stack(children: [
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height-200,
+              height: MediaQuery.of(context).size.height/1.5,
               child: Image.file(File(path),
               fit:BoxFit.cover,
               ),
