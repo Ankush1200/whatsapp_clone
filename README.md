@@ -11,4 +11,5 @@ Users can seamlessly exchange text messages, multimedia files, and capture and s
 
 This project not only showcases my proficiency in mobile app development but also demonstrates my ability to create a feature-rich, user-friendly application reminiscent of WhatsApp.
 
+This ongoing project not only highlights my proficiency in mobile app development but also showcases my commitment to delivering a comprehensive and feature-rich messaging experience, UI part almost ready and the chat server part is under developing condition but we will achieve soon.
 
