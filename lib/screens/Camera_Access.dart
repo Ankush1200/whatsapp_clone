@@ -2,7 +2,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Camera_view.dart';
+import 'Cam_picture_view.dart';
 
 List<CameraDescription> cameras = [];
 
@@ -143,7 +143,7 @@ class _CameraAccessState extends State<CameraAccess> {
     Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (builder) => CameraView(
+            builder: (builder) => CameraPictureView(
                   path: file.path,
                 )));
   }

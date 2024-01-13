@@ -69,7 +69,6 @@ class ChatList extends StatelessWidget {
               ],
             ),
             // onTap:(){
-
             // },
           ),
         ],

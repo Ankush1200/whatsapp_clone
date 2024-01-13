@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Colors/theaming.dart';
 
-class CameraView extends StatelessWidget {
-  const CameraView({super.key, required this.path,});
+class CameraPictureView extends StatelessWidget {
+  const CameraPictureView({super.key, required this.path,});
 
   final String path;
   @override
