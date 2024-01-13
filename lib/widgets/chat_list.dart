@@ -52,7 +52,7 @@ class ChatList extends StatelessWidget {
             trailing: Column(
               children: [
                 const SizedBox(
-                  height:10,
+                  height:0,
                 ),
                 Text(
                   chatModel.time,
