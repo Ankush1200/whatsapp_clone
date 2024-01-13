@@ -21,7 +21,6 @@ class _CameraAccessState extends State<CameraAccess> {
   @override
   void initState() {
     super.initState();
-    
     cameraController = CameraController(cameras[0], ResolutionPreset.high);
     cameravalue = cameraController.initialize();
     cameraController.setFlashMode(FlashMode.off);
