@@ -3,7 +3,6 @@ import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Cam_picture_view.dart';
-import 'Cam_video_view.dart';
 
 List<CameraDescription> cameras = [];
 
