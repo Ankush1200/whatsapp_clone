@@ -5,6 +5,7 @@ import 'package:whatsapp_clone/Colors/theaming.dart';
 import 'package:whatsapp_clone/Screens/Camera_Access.dart';
 import 'package:whatsapp_clone/Widgets/Attach_file.dart';
 import '../Model/chat_model.dart';
+import '../Widgets/Reply_card.dart';
 import '../Widgets/own_Message_card.dart';
 
 class IndividualChat extends StatefulWidget {
@@ -130,9 +131,25 @@ class _IndividualChatState extends State<IndividualChat> {
               child: Stack(
                 children: [
                   ListView(
+                    physics:const BouncingScrollPhysics(),
                     shrinkWrap: true,
-                    children: [
+                    children: const [
                       OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
+                      OwnMessageCard(),
+                      ReplyCard(),
                     ],
                   ),
                   Align(
