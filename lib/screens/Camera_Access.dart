@@ -17,11 +17,12 @@ class _CameraAccessState extends State<CameraAccess> {
   late CameraController cameraController;
   late Future<void> cameravalue;
   late FlashMode currentflashmode = FlashMode.off;
+  bool flipCamera=true;
 
   @override
   void initState() {
     super.initState();
-    cameraController = CameraController(cameras[0], ResolutionPreset.high);
+    cameraController = CameraController(cameras[1], ResolutionPreset.high);
     cameravalue = cameraController.initialize();
     cameraController.setFlashMode(FlashMode.off);
   }
@@ -110,7 +111,7 @@ class _CameraAccessState extends State<CameraAccess> {
                               
                             },
                             onLongPressUp: (){
-                              
+                      
                             },
                             onTap: () {
                               takePhoto(context);
@@ -122,7 +123,18 @@ class _CameraAccessState extends State<CameraAccess> {
                               size: 70,
                             )),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                flipCamera=!flipCamera;
+                                if(flipCamera==false){
+                                cameraController = CameraController(cameras[1], ResolutionPreset.high);
+                                print(cameras[1]);
+                                }
+                                else{
+                                  cameraController = CameraController(cameras[0], ResolutionPreset.high);
+                                }
+                              });
+                            },
                             icon: const Icon(Icons.flip_camera_android,
                                 color: Colors.white)),
                       ],

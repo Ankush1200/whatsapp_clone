@@ -130,27 +130,31 @@ class _IndividualChatState extends State<IndividualChat> {
             child: WillPopScope(
               child: Stack(
                 children: [
-                  ListView(
-                    physics:const BouncingScrollPhysics(),
-                    shrinkWrap: true,
-                    children: const [
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                      OwnMessageCard(),
-                      ReplyCard(),
-                    ],
+                  Container(
+                    height: MediaQuery.of(context).size.height-150,
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView(
+                      physics:const BouncingScrollPhysics(),
+                      shrinkWrap: true,
+                      children: const [
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                        OwnMessageCard(),
+                        ReplyCard(),
+                      ],
+                    ),
                   ),
                   Align(
                     alignment: Alignment.bottomCenter,
